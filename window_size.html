@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>window_size</title>
+    <style>
+      .windowSize {
+        padding: 12px 20px;
+        display: inline-block;
+        background-color: lightpink;
+        font-size: 24px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="windowSize"></div>
+  </body>
+  <script>
+    showWindowSize();
+    function showWindowSize() {
+      let windowSize = document.querySelector(".windowSize");
+      windowSize.innerHTML = `
+      <span> window-size : ${window.screen.width} , ${window.screen.height} </span>
+      <br/>
+      <span> window-outer : ${window.outerWidth} , ${window.outerHeight} </span>
+      <br/>
+      <span> window-inner : ${window.innerWidth} , ${window.innerHeight} </span>
+      <br/>
+      <span> window-client : ${document.documentElement.clientWidth} , ${document.documentElement.clientHeight} </span>
+      `;
+    }
+    // ✅ 동적으로 변수 값을 변경하고 싶을 때 => 이벤트 함수 사용
+    window.addEventListener("resize", showWindowSize);
+  </script>
+</html>
