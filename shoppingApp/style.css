@@ -1,0 +1,85 @@
+@import "./reset.css";
+@import url("https://fonts.googleapis.com/css2?family=Jua&display=swap");
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+body {
+  background-color: lightgray;
+  font-family: "Jua", sans-serif;
+}
+
+.fas {
+  font-size: 24px;
+}
+
+.app {
+  margin: 0 auto;
+  margin-top: 30px;
+  width: 500px;
+  background-color: lightcyan;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.app-title {
+  padding: 12px 0;
+  text-align: center;
+  width: inherit;
+  background: rgb(2, 0, 36);
+  background: linear-gradient(
+    90deg,
+    rgba(2, 0, 36, 1) 0%,
+    rgba(213, 77, 189, 1) 24%,
+    rgba(0, 212, 255, 1) 100%
+  );
+}
+
+h1 {
+  font-size: 24px;
+  color: white;
+}
+
+.app-list {
+  width: inherit;
+  height: 300px;
+  overflow: scroll;
+  overflow-x: hidden;
+}
+
+.item {
+  padding: 8px 12px;
+  display: flex;
+  justify-content: space-between;
+}
+
+input {
+  padding: 12px;
+  width: inherit;
+  height: 40px;
+  border: none;
+}
+
+.app-footer {
+  padding: 12px 0;
+  text-align: center;
+  width: inherit;
+  background: rgb(2, 0, 36);
+  background: linear-gradient(
+    90deg,
+    rgba(2, 0, 36, 1) 0%,
+    rgba(213, 77, 189, 1) 24%,
+    rgba(0, 212, 255, 1) 100%
+  );
+}
+
+.fa-trash:hover {
+  color: red;
+}
+
+.fa-plus-square:hover {
+  color: skyblue;
+}

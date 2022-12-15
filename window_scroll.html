@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>window_scroll</title>
+    <style>
+      * {
+        box-sizing: border-box;
+        margin: 0;
+      }
+
+      body {
+        background-color: lightgrey;
+        position: relative;
+      }
+
+      button:first-child,
+      button:nth-child(2) {
+        margin-right: 8px;
+      }
+
+      .normal {
+        margin-bottom: 8px;
+        width: 120px;
+        height: 120px;
+        background-color: beige;
+      }
+
+      .special {
+        margin-bottom: 8px;
+        width: 120px;
+        height: 120px;
+        background-color: tomato;
+      }
+
+      .button-container {
+        width: 100%;
+        height: 30px;
+        display: flex;
+        justify-content: flex-end;
+        position: fixed;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="button-container">
+      <button class="by100px">100px 씩 움직이기</button>
+      <button class="to100px">300px 로 움직이기</button>
+      <button class="toSpecial">특별한 상자로 움직이기</button>
+    </div>
+
+    <div class="normal"></div>
+    <div class="normal"></div>
+    <div class="normal"></div>
+    <div class="normal"></div>
+    <div class="normal"></div>
+    <div class="normal"></div>
+    <div class="normal"></div>
+    <div class="special"></div>
+    <div class="normal"></div>
+    <div class="normal"></div>
+    <div class="normal"></div>
+    <div class="normal"></div>
+    <div class="normal"></div>
+    <div class="normal"></div>
+    <div class="normal"></div>
+
+    <script>
+      const by100px = document.querySelector(".by100px");
+      const to100px = document.querySelector(".to100px");
+      const toSpecial = document.querySelector(".toSpecial");
+      const special = document.querySelector(".special");
+
+      by100px.addEventListener("click", () => {
+        window.scrollBy({ left: 0, top: 100, behavior: "smooth" });
+      });
+
+      to100px.addEventListener("click", () => {
+        window.scrollTo({ left: 0, top: 300, behavior: "smooth" });
+      });
+
+      toSpecial.addEventListener("click", () => {
+        special.scrollIntoView({ behavior: "smooth" });
+      });
+    </script>
+  </body>
+</html>
